@@ -14,3 +14,11 @@ input_number = int(input())
 print(f"{input_number}! = {expression}")
 print(f" = {result}")
 
+"""
+$ python factorial.py
+Recursion practice - factorial
+Enter a number
+7
+7! = 7 * 6 * 5 * 4 * 3 * 2 * 1
+ = 5040
+"""
