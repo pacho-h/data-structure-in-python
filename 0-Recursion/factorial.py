@@ -16,7 +16,7 @@ print(f"{input_number}! = {expression}")
 print(f" = {result}")
 
 """
-$ python factorial.py
+$ poetry run python factorial.py
 Recursion practice - factorial
 Enter a number
 7
