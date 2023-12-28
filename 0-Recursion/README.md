@@ -52,3 +52,12 @@ n! : n == 0 OR n == 1 -> return 1
 
 구현: factorial.py
 
+## exponentiation
+거듭제곱
+정수부(base)와 지수부(exponent)로 구분된다.
+```
+2^8 = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 256
+2의 8승이라고도 하며, 2를 8번 곱한다.
+```
+
+구현: exponentiation.py
