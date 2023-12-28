@@ -61,3 +61,15 @@ n! : n == 0 OR n == 1 -> return 1
 ```
 
 구현: exponentiation.py
+
+## Fibonacci numbers
+피보나치 수
+0번째 항이 0, 1번째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열이다.
+```
+피보나치 수 F
+F[0] = 0
+F[1] = 1
+F[n] = F[n - 2] + F[n - 1]  # (if n > 2)
+```
+
+구현: fibonacci_numbers.py

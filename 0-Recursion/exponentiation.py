@@ -4,6 +4,7 @@ def exponentiation(base, exponent):
     else:
         return base
 
+
 print("Recursion practice - exponentiation\nEnter a base and a exponen\nbase:")
 base = int(input())
 print("exponent:")
