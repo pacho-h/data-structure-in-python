@@ -10,8 +10,6 @@ python = "^3.12"
 isort = "^5.13.2"
 black = "^23.12.1"
 ruff = "^0.1.9"
-pytest = "^7.4.3"
-pytest-watcher = "^0.3.4"
 
 
 [build-system]
@@ -43,8 +41,4 @@ ignore = [
 
 [tool.ruff.flake8-builtins]
 builtins-ignorelist = ["id", "type"]
-
-[tool.pytest-watcher]
-now = true
-runner = "pytest"
 
