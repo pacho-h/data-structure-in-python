@@ -1,0 +1,19 @@
+{
+  "configurations": {
+    "Python-vimspector: Launch": {
+      "adapter": "debugpy",
+      "filetypes": [ "python" ],
+      "configuration": {
+        "name": "Python-vimspector: Launch",
+        "type": "python",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "python": "/Users/han/Library/Caches/pypoetry/virtualenvs/data-stucture-in-python-lk5zYfSe-py3.12/bin/python",
+        "stopOnEntry": true,
+        "console": "externalTerminal",
+        "debugOptions": ["-i"],
+        "program": "${file}"
+      }
+    }
+  }
+}
