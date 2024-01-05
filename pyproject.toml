@@ -42,4 +42,3 @@ ignore = [
 
 [tool.ruff.flake8-builtins]
 builtins-ignorelist = ["id", "type"]
-
