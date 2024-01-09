@@ -3,6 +3,13 @@
     "Python-vimspector: Launch": {
       "adapter": "debugpy",
       "filetypes": [ "python" ],
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "Y",
+          "userUnhandled": "Y"
+        }
+      },
       "configuration": {
         "name": "Python-vimspector: Launch",
         "type": "python",
