@@ -1,15 +1,22 @@
 from tabulate import tabulate
 
 
-def addition(polynomial1, polynomial2):
-    # get maximum degree
-    polynomial1_maximum_degree = len(polynomial1) - 1
-    polynomial2_maximum_degree = len(polynomial2) - 1
+def get_maximum_degree(polynomial1, polynomial2):
+    return (len(polynomial1) - 1, len(polynomial2) - 1)
+
+
+def add(polynomial1, polynomial2):
+    (
+        polynomial1_maximum_degree,
+        polynomial2_maximum_degree,
+    ) = get_maximum_degree(polynomial1, polynomial2)
+
     maximum_degree = (
         polynomial1_maximum_degree
         if polynomial1_maximum_degree >= polynomial2_maximum_degree
         else polynomial2_maximum_degree
     )
+
     polynomial1.reverse()
     polynomial2.reverse()
 
@@ -31,12 +38,15 @@ def addition(polynomial1, polynomial2):
     return result
 
 
+def multiply(polynomial1, polynomial2):
+    # TODO: write multiply logic
+    return []
+
+
 print(
-    """
-Array practice - Polynomial calculate
+    """Array practice - Polynomial calculate
 Enter polynomial1
-ex) 2X^3 - 4X + 8 -> 2 0 -4 8
-""",
+ex) 2X^3 - 4X + 8 -> 2 0 -4 8""",
 )
 
 input_polynomial1 = input().split()
@@ -52,7 +62,10 @@ print(
 )
 
 print("Addtion")
-addition_result = addition(input_polynomial1, input_polynomial2)
+addition_result = add(input_polynomial1, input_polynomial2)
 print(f"{tabulate([addition_result],tablefmt='simple_outline')}")
 
-# print("Multiplication")
+
+print("Multiplication")
+multiplication_result = multiply(input_polynomial1, input_polynomial2)
+print(f"{tabulate([multiplication_result],tablefmt='simple_outline')}")
