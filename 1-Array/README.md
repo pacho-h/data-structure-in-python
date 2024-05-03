@@ -92,7 +92,7 @@ polynomial2
 
 Python 코드로 작성하면
 ```python
-// index를 차수로 사용하기 위해 다항식 차수의 오름차순으로 생성
+# index를 차수로 사용하기 위해 다항식 차수의 오름차순으로 생성
 polynomial1 = [3, 1, 4, 0, 2]
 polynomial2 = [6, 5]
 ```
@@ -101,3 +101,32 @@ polynomial2 = [6, 5]
 - 다항식의 곱셈: 분배법칙 이용, 두 항의 곱셈은 계수끼리 곱하고, 동일한 변수의 차수끼리 더한다.
 
 구현: [polynomial.py](https://github.com/pacho-h/data-structure-in-python/blob/main/1-Array/polynomial.py)
+
+# 배열의 응용: 희소 행렬(Sparse Matrix)
+
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dbbd270e3e174daa36d9c2460211fe6f8569c0e6" style="background-color: white; width: 400px;" title="sparse matrix"/>
+
+출처: [위키백과-성긴 행렬](https://ko.wikipedia.org/wiki/%EC%84%B1%EA%B8%B4_%ED%96%89%EB%A0%AC)
+
+희소 행렬(성긴 행렬; sparse matrix)이란, 대부분의 값이 0인 행렬을 말한다.
+2차원 배열을 활용하여 간단히 행렬을 구현할 수 있는데 희소 행렬처럼 같은 값(0)이 대부분이고 특정 좌표에만 다른 값이 저장 되어 있는 경우, 다른(0이 아닌)값이 저장된 곳의 위치(행,열)와 값만을 저장하여 메모리 공간을 절약할 수 있다.
+
+2차원으로 표현한 희소 행렬:
+
+```python
+# 희소 행렬
+matrix = [[0, 0, 0, 0, 0],
+          [0, 5, 0, 0, 0],
+          [0, 0, 0, 3, 0],
+          [0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 7]]
+
+# 0이 아닌 값만 위치와 값을 Tuple List로 표현
+# [(행, 열, 값), ...]
+sparse_matrix = [(1, 1, 5),
+                 (2, 3, 3),
+                 (4, 5, 7)]
+```
+
+구현: [sparse-matrix.py](https://github.com/pacho-h/data-structure-in-python/blob/main/1-Array/sparse-matrix.py)
+

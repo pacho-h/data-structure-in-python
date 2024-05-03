@@ -23,16 +23,8 @@ def add(polynomial1, polynomial2):
     result = []
     for index in reversed(range(maximum_degree + 1)):
         result.append(
-            (
-                int(polynomial1[index])
-                if index <= polynomial1_maximum_degree
-                else 0
-            )
-            + (
-                int(polynomial2[index])
-                if index <= polynomial2_maximum_degree
-                else 0
-            ),
+            (int(polynomial1[index]) if index <= polynomial1_maximum_degree else 0)
+            + (int(polynomial2[index]) if index <= polynomial2_maximum_degree else 0),
         )
 
     return result
