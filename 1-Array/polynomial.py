@@ -31,9 +31,15 @@ def add(polynomial1, polynomial2):
 
 
 def multiply(polynomial1, polynomial2):
-    # TODO: write multiply logic
-    return []
+    polynomial1_maximum_degree, polynomial2_maximum_degree = get_maximum_degree(polynomial1, polynomial2)
+    result_degree = polynomial1_maximum_degree + polynomial2_maximum_degree
+    result = [0] * (result_degree + 1)
 
+    for i in range(polynomial1_maximum_degree + 1):
+        for j in range(polynomial2_maximum_degree + 1):
+            result[i + j] += int(polynomial1[i]) * int(polynomial2[j])
+
+    return result
 
 print(
     """Array practice - Polynomial calculate
@@ -43,21 +49,20 @@ ex) 2X^3 - 4X + 8 -> 2 0 -4 8""",
 
 input_polynomial1 = input().split()
 
-print("Enter polynomial2")
+print('Enter polynomial2')
 input_polynomial2 = input().split()
 
 print(
-    f"polynomial1:\n{tabulate([input_polynomial1],tablefmt='simple_outline')}",
+    f"polynomial1:\n{tabulate([input_polynomial1], tablefmt='simple_outline')}",
 )
 print(
-    f"polynomial2:\n{tabulate([input_polynomial2],tablefmt='simple_outline')}",
+    f"polynomial2:\n{tabulate([input_polynomial2], tablefmt='simple_outline')}",
 )
 
-print("Addtion")
+print('Addtion')
 addition_result = add(input_polynomial1, input_polynomial2)
-print(f"{tabulate([addition_result],tablefmt='simple_outline')}")
+print(f"{tabulate([addition_result], tablefmt='simple_outline')}")
 
-
-print("Multiplication")
+print('Multiplication')
 multiplication_result = multiply(input_polynomial1, input_polynomial2)
-print(f"{tabulate([multiplication_result],tablefmt='simple_outline')}")
+print(f"{tabulate([multiplication_result], tablefmt='simple_outline')}")
