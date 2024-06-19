@@ -41,6 +41,7 @@ def multiply(polynomial1, polynomial2):
 
     return result
 
+
 print(
     """Array practice - Polynomial calculate
 Enter polynomial1
