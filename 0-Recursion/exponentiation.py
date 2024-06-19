@@ -5,13 +5,13 @@ def exponentiation(base, exponent):
         return base
 
 
-print("Recursion practice - exponentiation\nEnter a base and a exponen\nbase:")
+print('Recursion practice - exponentiation\nEnter a base and a exponen\nbase:')
 base = int(input())
-print("exponent:")
+print('exponent:')
 exponent = int(input())
 
 result = exponentiation(base, exponent)
-print(f"{base}^{exponent} = {result}")
+print(f'{base}^{exponent} = {result}')
 
 """
 $ poetry run python exponentiation.py
