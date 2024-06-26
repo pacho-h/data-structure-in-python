@@ -14,22 +14,22 @@ class Deque:
     def pop_front(self):
         if not self.is_empty():
             return self.deque.popleft()
-        raise IndexError("pop from empty deque")
+        raise IndexError('pop from empty deque')
 
     def pop_rear(self):
         if not self.is_empty():
             return self.deque.pop()
-        raise IndexError("pop from empty deque")
+        raise IndexError('pop from empty deque')
 
     def front(self):
         if not self.is_empty():
             return self.deque[0]
-        raise IndexError("front from empty deque")
+        raise IndexError('front from empty deque')
 
     def rear(self):
         if not self.is_empty():
             return self.deque[-1]
-        raise IndexError("rear from empty deque")
+        raise IndexError('rear from empty deque')
 
     def is_empty(self):
         return len(self.deque) == 0

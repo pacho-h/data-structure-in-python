@@ -8,12 +8,12 @@ class ArrayQueue:
     def dequeue(self):
         if not self.is_empty():
             return self.queue.pop(0)
-        raise IndexError("dequeue from empty queue")
+        raise IndexError('dequeue from empty queue')
 
     def front(self):
         if not self.is_empty():
             return self.queue[0]
-        raise IndexError("front from empty queue")
+        raise IndexError('front from empty queue')
 
     def is_empty(self):
         return len(self.queue) == 0

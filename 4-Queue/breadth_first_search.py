@@ -8,7 +8,7 @@ def bfs(graph, start):
 
     while queue:
         vertex = queue.popleft()
-        print(vertex, end=" ")
+        print(vertex, end=' ')
 
         for neighbor in graph[vertex]:
             if neighbor not in visited:
@@ -17,12 +17,5 @@ def bfs(graph, start):
 
 
 # 사용 예제
-graph = {
-    'A': ['B', 'C'],
-    'B': ['A', 'D', 'E'],
-    'C': ['A', 'F'],
-    'D': ['B'],
-    'E': ['B', 'F'],
-    'F': ['C', 'E']
-}
+graph = {'A': ['B', 'C'], 'B': ['A', 'D', 'E'], 'C': ['A', 'F'], 'D': ['B'], 'E': ['B', 'F'], 'F': ['C', 'E']}
 bfs(graph, 'A')  # A B C D E F

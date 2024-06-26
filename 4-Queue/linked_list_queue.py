@@ -27,12 +27,12 @@ class LinkedListQueue:
             if self.front_node is None:
                 self.rear = None
             return data
-        raise IndexError("dequeue from empty queue")
+        raise IndexError('dequeue from empty queue')
 
     def front(self):
         if not self.is_empty():
             return self.front_node.data
-        raise IndexError("front from empty queue")
+        raise IndexError('front from empty queue')
 
     def is_empty(self):
         return self.front_node is None
