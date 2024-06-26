@@ -129,4 +129,3 @@ sparse_matrix = [(1, 1, 5),
 ```
 
 구현: [sparse-matrix.py](https://github.com/pacho-h/data-structure-in-python/blob/main/1-Array/sparse-matrix.py)
-
